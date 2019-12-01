@@ -1,0 +1,211 @@
+.calc {
+    background-color: $color-background-primary;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+
+    h3 {
+        font-size: 3rem;
+        font-family: $font-Raleway;
+        margin: 50px 0;
+        text-align: center;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .content_one {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+
+        form {
+            width: 100%;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            border: 1px solid $color-blue;
+            border-radius: 6px;
+            margin-top: 5px;
+            padding: 5px;
+            font-family: $font-Open-Sans;
+            font-size: 1.5rem;
+
+            &:focus {
+                outline: none;
+                border: 1px solid $color-red;
+            }
+        }
+
+        .select__option {
+            position: relative;
+            width: 100%;
+            background-color: $color-background-second;
+
+            .calc__arrow {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 30%;
+                right: 2%;
+                transform: rotate(180deg);
+                transition: 0.3s;
+            }
+
+            .transform__rotate {
+                transform: rotate(0deg);
+                transition: 0.2s;
+            }
+
+            .select__selected {
+                width: 100%;
+                border: 1px solid $color-blue;
+                color: gray;
+                box-shadow: 0px 3px 6px #08A6E429;
+                border-radius: 6px;
+                margin-top: 5px;
+                padding: 5px;
+                font-size: 1.5rem;
+                font-family: $font-Open-Sans;
+                -moz-appearance: none;
+                -webkit-appearance: none;
+                appearance: none;
+                cursor: pointer;
+            }
+
+            .select__items {
+                position: absolute;
+                font-size: 1.5rem;
+                font-family: $font-Open-Sans;
+                background-color: $color-background-second;
+                border: 1px solid $color-red;
+                border-radius: 6px;
+                top: 110%;
+                left: 0;
+                right: 0;
+                z-index: 99;
+
+                div {
+                    color: black;
+                    padding: 10px;
+                    cursor: pointer;
+                }
+            }
+
+            select {
+                display: none;
+            }
+
+            .select__hide {
+                display: none;
+            }
+
+            .select__color {
+                color: black;
+            }
+
+            .select__border {
+                border: 1px solid $color-red;
+            }
+        }
+
+        .checkboxs {
+            align-self: flex-start;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .checkbox {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin-top: 10px;
+
+                span {
+                    margin-left: 10px;
+                    text-align: left;
+                    color: #707070;
+                    font-size: 1.5rem;
+                }
+            }
+
+            input[type="checkbox"] {}
+        }
+
+    }
+
+    .content__second {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        margin: 10px 0;
+
+        div {
+            background-color: $color-green;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10px;
+            box-shadow: 0px 3px 6px #00000029;
+            border-radius: 6px;
+            margin-top: 5px;
+
+            span {
+                color: white;
+                font-size: 1.5rem;
+                font-family: $font-Open-Sans;
+                width: 33%;
+            }
+
+            .content__name {
+                text-align: left;
+            }
+
+            .content__price {
+                text-align: right;
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+        }
+
+        .total {
+            background-color: $color-blue;
+            width: 40%;
+            align-self: flex-end;
+            margin-top: 15px;
+            padding: 5px 10px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .calc {
+        .content {
+            flex-direction: row;
+            justify-content: space-around;
+            width: 80%;
+        }
+
+        .content_one {
+            width: 40%;
+        }
+
+        .content__second {
+            width: 40%;
+        }
+    }
+}

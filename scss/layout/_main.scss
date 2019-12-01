@@ -1,0 +1,214 @@
+main {
+    background-color: $color-background-primary;
+    padding: 35px 0px;
+}
+
+.col__second {
+    background-color: $color-background-second;
+    border: 1px solid #E8E9ED;
+    margin: 30px;
+}
+
+.isolation {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .picture__mackbook {
+        position: relative;
+        width: 200px;
+        height: 110px;
+        display: flex;
+        justify-content: center;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 90px;
+            height: 90px;
+            border-radius: 45%;
+            background-color: $color-red;
+            position: absolute;
+            top: -15px;
+            left: 120px;
+            transform: rotate(45deg);
+        }
+
+
+        .img__mackbook {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+    }
+
+    .picture__iphone {
+        position: relative;
+        width: 170px;
+        height: 150px;
+        display: flex;
+        justify-content: center;
+
+        &::after {
+            content: "";
+            display: block;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background-color: $color-blue;
+            position: absolute;
+            top: -5px;
+            left: 5px;
+            transform: rotate(45deg);
+        }
+
+        .img__iphone {
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    }
+
+    .picture__trumpet {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-green;
+        width: 100%;
+
+        .trumpet__center {
+            position: relative;
+            width: 300px;
+            height: 200px;
+        }
+
+        .trumpet {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: -25px;
+            top: 40px;
+        }
+    }
+
+    .last {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding: 30px;
+
+        h2 {
+            font-size: 3rem;
+            font-family: $font-Raleway;
+        }
+
+        span {
+            margin-top: 20px;
+            font-size: 1.5rem;
+            font-family: $font-Open-Sans;
+            text-align: left;
+        }
+    }
+
+}
+
+
+
+@media (min-width: 1024px) {
+
+    main {
+        padding: 20px 170px;
+    }
+
+    .isolation {
+        flex-direction: row;
+        justify-content: space-around;
+
+        .picture__mackbook {
+            width: 290px;
+            height: 170px;
+
+            &::after {
+                content: "";
+                display: block;
+                width: 150px;
+                height: 150px;
+                border-radius: 30px;
+                top: -20px;
+                left: 150px;
+            }
+        }
+
+        .picture__iphone {
+            width: 270px;
+            height: 250px;
+
+            &::after {
+                width: 230px;
+                height: 230px;
+                left: -5px;
+            }
+        }
+
+        .picture__trumpet {
+            width: 60%;
+            align-self: stretch;
+
+            .trumpet__center {
+                position: unset;
+                width: 400px;
+                height: 300px;
+            }
+
+            .trumpet {
+                padding: 60px 60px 0 0;
+                position: unset;
+            }
+        }
+
+        .last {
+            width: 35%;
+        }
+
+        .color__second {
+            background-color: $color-background-second;
+        }
+
+    }
+
+    .color__primary {
+        background-color: $color-background-primary;
+        padding: 0;
+        border: none;
+        justify-content: space-between;
+    }
+
+    .reverse {
+        flex-direction: row-reverse;
+    }
+
+    .line__one {
+        width: 100%;
+        border: 2px solid $color-red;
+        background-color: $color-red;
+        margin: 30px 0;
+    }
+
+    .line__second {
+        width: 100%;
+        border: 2px solid $color-blue;
+        background-color: $color-blue;
+        margin: 30px 0;
+    }
+
+    .line__three {
+        width: 100%;
+        border: 2px solid $color-green;
+        background-color: $color-green;
+        margin: 30px 0;
+    }
+}
