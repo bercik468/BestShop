@@ -167,7 +167,15 @@
                     }
 
                     a {
-                        bottom: -6%;
+                        bottom: -5%;
+                    }
+                }
+
+                .basic {
+                    justify-content: flex-start;
+
+                    .left {
+                        margin-bottom: 15px;
                     }
                 }
 
