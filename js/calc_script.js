@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
             this.nextSibling.classList.toggle("select__hide");
             this.classList.toggle("select-arrow-active");
         });
-    }
+    };
 
     function closeAllSelect(elmnt) {
         const arrNo = [];
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
         y = document.getElementsByClassName("select__selected");
         for (i = 0; i < y.length; i++) {
             if (elmnt == y[i]) {
-                arrNo.push(i)
+                arrNo.push(i);
             } else {
                 y[i].classList.remove("select-arrow-active");
             }
@@ -61,9 +61,8 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener("click", closeAllSelect);
 
 
+    //colors
 
-
-    //kolorystyka
     const selectSelected = document.querySelector('.select__selected');
     const selectOtions = document.querySelector('.select__items');
     const calcArrow = document.querySelector(".calc__arrow");
@@ -101,25 +100,23 @@ document.addEventListener('DOMContentLoaded', function () {
     const checkboxOne = document.querySelector(".checkbox__one");
     const checkboxSecond = document.querySelector(".checkbox__second");
 
+    //calc
 
-
-    let cost1 = '';
-    let cost2 = '';
-    let cost3 = '';
-    let cost4 = '';
-    let cost5 = '';
+    let cost1 = 0;
+    let cost2 = 0;
+    let cost3 = 0;
+    let cost4 = 0;
+    let cost5 = 0;
 
     inputProducts.addEventListener('keyup', function () {
         const number = this.value;
-        let total = "";
         if (number < 0) {
-            alert("wpisz dodatnią wartość!")
+            alert("wpisz dodatnią wartość!");
         } else {
             valueProducts.innerText = `${number} * 2$`;
             costProducts.innerText = number * 2;
             total = (number * 2);
         };
-
         cost1 = number * 2;
         costTotal.innerText = (cost1 + cost2 + cost3 + cost4 + cost5);
     });
@@ -128,15 +125,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     inputOrder.addEventListener('keyup', function () {
         const number = this.value;
-        let total = "";
         if (number < 0) {
             alert("wpisz dodatnią wartość!")
         } else {
-            valueOrders.innerText = `${number} * 1$`
-            costOrders.innerText = number * 1
-            total = (number * 1)
+            valueOrders.innerText = `${number} * 1$`;
+            costOrders.innerText = number * 1;
+            total = (number * 1);
         }
-        cost2 = number * 1;
+        cost2 = number * 1;;
         costTotal.innerText = (cost1 + cost2 + cost3 + cost4 + cost5);
     });
 
@@ -145,41 +141,41 @@ document.addEventListener('DOMContentLoaded', function () {
         const number = this.innerText;
 
         if (number == 'Basic') {
-            valuePackage.innerText = number
-            costPackage.innerText = "0"
+            valuePackage.innerText = number;
+            costPackage.innerText = "0";
             cost3 = 0;
         } else if (number == 'Professional') {
-            valuePackage.innerText = number
-            costPackage.innerText = "25"
+            valuePackage.innerText = number;
+            costPackage.innerText = "25";
             cost3 = 25;
         } else if (number == 'Premium') {
-            valuePackage.innerText = number
-            costPackage.innerText = "60"
+            valuePackage.innerText = number;
+            costPackage.innerText = "60";
             cost3 = 60;
         } else {
-            costPackage.innerText = "0"
+            costPackage.innerText = "0";
             cost3 = 0;
         }
         costTotal.innerText = (cost1 + cost2 + cost3 + cost4 + cost5);
-    })
+    });
 
 
     checkboxOne.addEventListener('click', function () {
         if (this.checked) {
-            costAccounting.innerText = "5"
+            costAccounting.innerText = "5";
             cost4 = 5;
         } else {
-            costAccounting.innerText = "0"
+            costAccounting.innerText = "0";
             cost4 = 0;
         }
         costTotal.innerText = (cost1 + cost2 + cost3 + cost4 + cost5);
     });
     checkboxSecond.addEventListener('click', function () {
         if (this.checked) {
-            costTerminal.innerText = "2"
-            cost5 = 2;
+            costTerminal.innerText = "2";
+            cost5 = 2;;
         } else {
-            costTerminal.innerText = "0"
+            costTerminal.innerText = "0";
             cost5 = 0;
         }
         costTotal.innerText = (cost1 + cost2 + cost3 + cost4 + cost5);
