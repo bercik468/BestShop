@@ -29,9 +29,11 @@
             box-shadow: 5px 10px 14px #07ACE629;
             margin: 40px 0;
             cursor: pointer;
+            outline: none;
 
             &:hover {
                 background-color: black;
+                outline: none;
             }
         }
     }

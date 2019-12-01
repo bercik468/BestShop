@@ -122,6 +122,11 @@
                     width: 170px;
                     height: 50px;
                     cursor: pointer;
+
+                    &:hover {
+                        background-color: black;
+                        outline: none;
+                    }
                 }
             }
         }
